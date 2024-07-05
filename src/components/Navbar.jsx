@@ -1,4 +1,4 @@
-import { Menu, X } from "lucide-react";
+import { Contact, Menu, Phone, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
 import { navItems } from "../constants";
@@ -57,7 +57,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="sticky top-0 z-50 py-3 bg-[#121212] px-6 ">
-        <div className="container  mx-auto relative ">
+        <div className="container  mx-auto relative px-4 ">
           <div className="flex justify-between items-center">
             <div className="flex items-center flex-shrink-0">
               <img className="h-10 w-10 mr-2" src={logo} alt="Logo" />
@@ -82,14 +82,15 @@ const Navbar = () => {
             </ul>
             <div className="hidden lg:flex justify-center space-x-12 items-center">
               <a
-                href="#"
-                className="py-2 px-3 rounded-md bg-gradient-to-r from-blue-500 to-blue-800"
                 onClick={(e) => {
                   e.preventDefault();
                   navigate("/contact");
                 }}
+                href="#"
+                className="flex justify-center items-center  text-blue-500 transition-transform transform hover:underline"
               >
-                Contact Us
+                <Phone className="w-3.5  mr-2 text-blue-500" />
+                <span>Contact Us</span>
               </a>
             </div>
             <div className="lg:hidden md:flex flex-col justify-end">
@@ -117,16 +118,17 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-              <div className="flex space-x-6">
+              <div className="flex space-x-6 items-center justify-center pt-4">
                 <a
                   onClick={(e) => {
                     e.preventDefault();
                     navigate("/contact");
                   }}
                   href="#"
-                  className="py-2 px-3 rounded-md bg-gradient-to-r from-blue-500 to-blue-800"
+                  className="flex justify-center items-center  text-blue-500 transition-transform transform hover:underline"
                 >
-                  Contact Us
+                  <Phone className="w-3.5  mr-2 text-blue-500" />
+                  <span>Contact Us</span>
                 </a>
               </div>
             </div>

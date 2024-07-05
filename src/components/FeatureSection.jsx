@@ -71,12 +71,17 @@ const FeatureSection = ({ id }) => {
                   subtitle="Customizable plans available"
                   content="We offer flexible financing options tailored to your financial situation. Our goal is to make your dream car purchase affordable and hassle-free."
                 />
+
+                <AccordionItem
+                  title="Mechanical Insurance"
+                  subtitle="Extended coverage for your vehicle"
+                  content="Get protection against mechanical failures with our comprehensive mechanical insurance plans."
+                />
                 <AccordionItem
                   title="Comprehensive Insurance"
                   subtitle="Protect your investment"
                   content="Ensure your peace of mind with comprehensive insurance coverage options tailored to safeguard your new vehicle."
                 />
-            
               </Accordion.Root>
             </div>
           </div>

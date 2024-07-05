@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Admin from "./pages/admin/Admin";
 import CarDetailPage from "./components/CarDetailPage";
 import ContactForm from "./components/ContactForm";
-
+import Allcars from "./pages/AllCars"
 const App = () => {
   return (
     <Router>
@@ -13,7 +13,7 @@ const App = () => {
         <Route path="/admin" element={<Admin />} />
         <Route path="/car/:id" element={<CarDetailPage />} />
         <Route path="/contact" element={<ContactForm />} />
-
+        <Route path="/all-cars" element={<Allcars />} />
       </Routes>
     </Router>
   );

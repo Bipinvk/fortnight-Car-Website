@@ -9,97 +9,9 @@ import {
   Car,
   Calendar,
 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { carData } from "../constants";
 
-// Import all images for each car
-import toyota_aqua_2015_1 from "../assets/cars/2015 Toyota aqua hybrid g model/1.jpeg";
-import toyota_aqua_2015_2 from "../assets/cars/2015 Toyota aqua hybrid g model/2.jpeg";
-import toyota_aqua_2015_3 from "../assets/cars/2015 Toyota aqua hybrid g model/3.jpeg";
-import toyota_aqua_2015_4 from "../assets/cars/2015 Toyota aqua hybrid g model/4.jpeg";
-import toyota_aqua_2015_5 from "../assets/cars/2015 Toyota aqua hybrid g model/5.jpeg";
-import toyota_aqua_2015_6 from "../assets/cars/2015 Toyota aqua hybrid g model/6.jpeg";
-import toyota_aqua_2015_7 from "../assets/cars/2015 Toyota aqua hybrid g model/7.jpeg";
-import toyota_aqua_2015_8 from "../assets/cars/2015 Toyota aqua hybrid g model/8.jpeg";
-import toyota_aqua_2015_9 from "../assets/cars/2015 Toyota aqua hybrid g model/9.jpeg";
-import toyota_aqua_2017_1 from "../assets/cars/2017 Toyota aqua hybrid 2017 Toyota aqua hybrid/2017.jpeg";
-import toyota_aqua_2017_2 from "../assets/cars/2017 Toyota aqua hybrid 2017 Toyota aqua hybrid/20172.jpeg";
-import toyota_aqua_2017_3 from "../assets/cars/2017 Toyota aqua hybrid 2017 Toyota aqua hybrid/20173.jpeg";
-import toyota_aqua_2017_4 from "../assets/cars/2017 Toyota aqua hybrid 2017 Toyota aqua hybrid/20174.jpeg";
-import toyota_aqua_2017_5 from "../assets/cars/2017 Toyota aqua hybrid 2017 Toyota aqua hybrid/20175.jpeg";
-import toyota_aqua_2017_6 from "../assets/cars/2017 Toyota aqua hybrid 2017 Toyota aqua hybrid/20176.jpeg";
-import toyota_aqua_2017_7 from "../assets/cars/2017 Toyota aqua hybrid 2017 Toyota aqua hybrid/20177.jpeg";
-import toyota_chr_1 from "../assets/cars/2017 Toyota CH-R hybrid/hybrid1.jpeg";
-import toyota_chr_2 from "../assets/cars/2017 Toyota CH-R hybrid/hybrid2.jpeg";
-import toyota_chr_3 from "../assets/cars/2017 Toyota CH-R hybrid/hybrid3.jpeg";
-import toyota_chr_4 from "../assets/cars/2017 Toyota CH-R hybrid/hybrid4.jpeg";
-import toyota_chr_5 from "../assets/cars/2017 Toyota CH-R hybrid/hybrid5.jpeg";
-import toyota_chr_6 from "../assets/cars/2017 Toyota CH-R hybrid/hybrid6.jpeg";
-import toyota_chr_7 from "../assets/cars/2017 Toyota CH-R hybrid/hybrid7.jpeg";
-
-const carData = [
-  {
-    id: 1,
-    name: "Toyota CH-R",
-    type: "Hybrid SUV",
-    images: [
-      toyota_chr_1,
-      toyota_chr_2,
-      toyota_chr_3,
-      toyota_chr_4,
-      toyota_chr_5,
-      toyota_chr_6,
-      toyota_chr_7,
-    ],
-    price: 21000,
-    year: 2017,
-    fuelType: "Hybrid",
-    mileage: 43000,
-    transmission: "Automatic",
-    details: "Push start, keyless entry, alloy wheels, adaptive cruise control",
-  },
-  {
-    id: 2,
-    name: "Toyota Aqua",
-    type: "Hybrid S model",
-    images: [
-      toyota_aqua_2017_1,
-      toyota_aqua_2017_2,
-      toyota_aqua_2017_3,
-      toyota_aqua_2017_4,
-      toyota_aqua_2017_5,
-      toyota_aqua_2017_6,
-      toyota_aqua_2017_7,
-    ],
-    price: 13800,
-    year: 2017,
-    fuelType: "Hybrid",
-    mileage: 71000,
-    transmission: "Automatic",
-    details: "Push start, keyless entry",
-  },
-  {
-    id: 3,
-    name: "Toyota Aqua",
-    type: "Hybrid g model",
-    images: [
-      toyota_aqua_2015_1,
-      toyota_aqua_2015_2,
-      toyota_aqua_2015_3,
-      toyota_aqua_2015_4,
-      toyota_aqua_2015_5,
-      toyota_aqua_2015_6,
-      toyota_aqua_2015_7,
-      toyota_aqua_2015_8,
-      toyota_aqua_2015_9,
-    ],
-    price: 13800,
-    year: 2015,
-    fuelType: "Hybrid",
-    mileage: 78000,
-    transmission: "Automatic",
-    details: "Push start, keyless entry, cruise control, excellent condition",
-  },
-];
 
 const CarCard = ({ car }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -129,8 +41,8 @@ const CarCard = ({ car }) => {
           <Bookmark className="w-5 h-5 text-gray-600" />
         </button>
       </div>
-      <div className="p-5">
-        <div className="flex items-center justify-between mb-3">
+      <div className="p-4">
+        <div className="flex items-center justify-between mb-1">
           <h3 className="text-xl font-bold text-gray-800">{car.name}</h3>
           <p className="text-sm font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
             {car.year}
@@ -138,7 +50,7 @@ const CarCard = ({ car }) => {
         </div>
         <p className="text-sm text-gray-600 mb-4">{car.type}</p>
 
-        <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
+        <div className="grid grid-cols-2 gap-2 mb-4 text-sm">
           <Feature
             icon={<Fuel className="w-4 h-4 mr-2" />}
             text={car.fuelType}
@@ -158,7 +70,7 @@ const CarCard = ({ car }) => {
         </div>
 
         <div className="text-xs text-gray-600 mb-1 flex-grow">
-          <div className="h-10 overflow-y-auto">
+          <div className="h-14 overflow-y-auto">
             {car.details.split(", ").map((detail, index) => (
               <span
                 key={index}
@@ -170,7 +82,7 @@ const CarCard = ({ car }) => {
           </div>
         </div>
 
-        <div className="flex justify-between items-center mb-4">
+        <div className="flex justify-between items-center mb-2">
           <button className="flex items-center text-green-600 text-sm font-semibold transition-all duration-300 hover:text-green-700"></button>
           <span className="text-2xl font-bold text-gray-800">
             ${car.price.toLocaleString()}
@@ -214,10 +126,10 @@ const Workflow = ({ id }) => {
               ))}
             </div>
             <div className="text-center">
-              <button className="bg-gray-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-300 inline-flex items-center font-semibold shadow-md hover:shadow-lg">
+              <Link to="/all-cars" className="bg-gray-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-300 inline-flex items-center font-semibold shadow-md hover:shadow-lg">
                 View More Cars
                 <ChevronRight className="w-5 h-5 ml-2" />
-              </button>
+              </Link>
             </div>
           </Tabs.Content>
         </Tabs.Root>
