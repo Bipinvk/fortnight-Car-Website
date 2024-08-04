@@ -1,6 +1,6 @@
 import { Contact, Menu, Phone, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo3.png";
 import { navItems } from "../constants";
 import ScrollToTop from "./scrollToTop";
 import { Navigate, useNavigate } from "react-router-dom";
@@ -60,15 +60,21 @@ const Navbar = () => {
         <div className="container  mx-auto relative px-4 ">
           <div className="flex justify-between items-center">
             <div className="flex items-center flex-shrink-0">
-              <img className="h-10 w-10 mr-2" src={logo} alt="Logo" />
-              <span className="text-xl tracking-tight">Fortune Cars</span>
+              <img className="h-10 w-10" src={logo} alt="Logo" />
+              <span className="text-xl font-bold tracking-tight ">
+                Fortune Cars
+              </span>
             </div>
             <ul className="hidden lg:flex space-x-12">
               {navItems.map((item, index) => (
                 <li key={index}>
                   <a
                     href={item.href}
-                    onClick={(e) => scrollToSection(e, item.href)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigate(`${item.href}`);
+                      scrollToSection(e, item.href);
+                    }}
                     className={`transition-colors duration-300 ${
                       activeSection === item.href
                         ? "text-blue-500"

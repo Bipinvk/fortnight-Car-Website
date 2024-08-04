@@ -27,10 +27,10 @@ const FeatureSection = ({ id }) => {
   return (
     <>
       <div id={id} className="bg-blue-600 px-6">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-10 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="text-white">
-              <h2 className="text-5xl font-bold mb-4">
+              <h2 className="text-5xl font-medium mb-4">
                 Discover Your Dream Car
               </h2>
               <p className="text-lg mb-12">

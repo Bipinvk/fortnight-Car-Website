@@ -4,7 +4,9 @@ import Home from "./pages/Home";
 import Admin from "./pages/admin/Admin";
 import CarDetailPage from "./components/CarDetailPage";
 import ContactForm from "./components/ContactForm";
-import Allcars from "./pages/AllCars"
+import Allcars from "./pages/AllCars";
+import Navbar from "./components/Navbar";
+import CarFinanceApplication from "./pages/Finance";
 const App = () => {
   return (
     <Router>
@@ -14,6 +16,7 @@ const App = () => {
         <Route path="/car/:id" element={<CarDetailPage />} />
         <Route path="/contact" element={<ContactForm />} />
         <Route path="/all-cars" element={<Allcars />} />
+        <Route path="/finance" element={<CarFinanceApplication />} />
       </Routes>
     </Router>
   );

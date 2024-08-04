@@ -67,13 +67,35 @@ import Toyotaaquapink9 from "../assets/cars/2017Toyotaaqua/2017Toyotaaqua9.jpeg"
 import Toyotaaquapink10 from "../assets/cars/2017Toyotaaqua/2017Toyotaaqua10.jpeg";
 import Toyotaaquapink11 from "../assets/cars/2017Toyotaaqua/2017Toyotaaqua11.jpeg";
 import Toyotaaquapink12 from "../assets/cars/2017Toyotaaqua/2017Toyotaaqua12.jpeg";
+import totyotomain from "../assets/cars/Toyotaprius2015/Toyotoprius1.jpeg";
+import Toyotaprius1 from "../assets/cars/Toyotaprius2015/Toyotoprius1.jpeg";
+import Toyotaprius2 from "../assets/cars/Toyotaprius2015/Toyotoprius2.jpeg";
+import Toyotaprius3 from "../assets/cars/Toyotaprius2015/Toyotoprius3.jpeg";
+import Toyotaprius4 from "../assets/cars/Toyotaprius2015/Toyotoprius4.jpeg";
+import Toyotaprius5 from "../assets/cars/Toyotaprius2015/Toyotoprius5.jpeg";
+import Toyotaprius6 from "../assets/cars/Toyotaprius2015/Toyotoprius6.jpeg";
+
+import priusalpha1 from "../assets/cars/Priusalpha2014/Priusalpha1.jpeg";
+import priusalpha2 from "../assets/cars/Priusalpha2014/Priusalpha2.jpeg";
+import priusalpha3 from "../assets/cars/Priusalpha2014/Priusalpha3.jpeg";
+import priusalpha4 from "../assets/cars/Priusalpha2014/Priusalpha4.jpeg";
+import priusalpha5 from "../assets/cars/Priusalpha2014/Priusalpha5.jpeg";
+import priusalpha6 from "../assets/cars/Priusalpha2014/Priusalpha6.jpeg";
+
+import prius1 from "../assets/cars/2013Toyotaprius/prius1.jpeg";
+import prius2 from "../assets/cars/2013Toyotaprius/prius2.jpeg";
+import prius3 from "../assets/cars/2013Toyotaprius/prius3.jpeg";
+import prius4 from "../assets/cars/2013Toyotaprius/prius4.jpeg";
+import prius5 from "../assets/cars/2013Toyotaprius/prius5.jpeg";
+import prius6 from "../assets/cars/2013Toyotaprius/prius6.jpeg";
 
 export const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "Features", href: "#features" },
-  { label: "Cars", href: "#cars" },
+  { label: "Home", href: "/" },
+  { label: "Features", href: "/" },
+  { label: "Cars", href: "/" },
   // { label: "Customers", href: "#customers" },
-  { label: "About", href: "#about" },
+  { label: "About", href: "/" },
+  {label: "Finance", href: "/finance"}
 ];
 
 export const carData = [
@@ -144,13 +166,13 @@ export const carData = [
     name: "Mazda Demio",
     type: "New Shape",
     images: [
+      mazda7,
+      mazda4,
       mazda1,
       mazda2,
       mazda3,
-      mazda4,
       mazda5,
       mazda6,
-      mazda7,
       mazda8,
       mazda9,
     ],
@@ -187,7 +209,7 @@ export const carData = [
     id: 6,
     name: "Toyota CH-R",
     type: "Hybrid g model",
-    images: [red4, red1, red2, red3, ],
+    images: [red2, red3, red4, red1],
     price: 25890,
     year: 2017,
     fuelType: "Hybrid",
@@ -200,13 +222,13 @@ export const carData = [
     name: "Toyota Aqua",
     type: " g model",
     images: [
+      Toyotaaqua5,
+      Toyotaaqua6,
+      Toyotaaqua7,
       Toyotaaqua1,
       Toyotaaqua2,
       Toyotaaqua3,
       Toyotaaqua4,
-      Toyotaaqua5,
-      Toyotaaqua6,
-      Toyotaaqua7,
       Toyotaaqua8,
       Toyotaaqua9,
       Toyotaaqua10,
@@ -224,18 +246,19 @@ export const carData = [
     name: "Toyota Aqua",
     type: "Hybrid g model",
     images: [
+      Toyotaaquapink10,
+      Toyotaaquapink11,
+      Toyotaaquapink12,
+      Toyotaaquapink4,
       Toyotaaquapink1,
       Toyotaaquapink2,
       Toyotaaquapink3,
       Toyotaaquapink4,
       Toyotaaquapink5,
-      Toyotaaquapink6,
+
       Toyotaaquapink7,
       Toyotaaquapink8,
       Toyotaaquapink9,
-      Toyotaaquapink10,
-      Toyotaaquapink11,
-      Toyotaaquapink12,
     ],
     price: 16800,
     year: 2017,
@@ -243,5 +266,64 @@ export const carData = [
     mileage: 26500,
     transmission: "Automatic",
     details: "Push start, keyless entry, excellent condition",
+  },
+  {
+    id: 9,
+    name: "Toyota Prius",
+    type: "Hybrid",
+    images: [
+      totyotomain,
+      priusalpha1,
+      Toyotaprius5,
+      Toyotaprius1,
+      Toyotaprius2,
+      Toyotaprius3,
+      Toyotaprius4,
+      Toyotaprius6,
+    ],
+    price: 15600,
+    year: 2015,
+    fuelType: "Hybrid",
+    mileage: 54000,
+    transmission: "Automatic",
+    details: "S model, push start, keyless entry, alloy wheels",
+  },
+  {
+    id: 10,
+    name: "Prius Alpha",
+    type: "Hybrid",
+    images: [
+      priusalpha4,
+      priusalpha3,
+      priusalpha5,
+      priusalpha6,
+      priusalpha1,
+      priusalpha2,
+    ],
+    price: 16500,
+    year: 2014,
+    fuelType: "Hybrid",
+    mileage: 59,
+    transmission: "Automatic",
+    details: "5 seats",
+  },
+  {
+    id: 11,
+    name: "Toyota Prius Alpha",
+    type: "Hybrid 7-Seater",
+    images: [
+      prius1,
+      prius2,
+      prius3,
+      prius4,
+      prius5,
+      prius6,
+    ],
+    price: 17999, 
+    year: 2013,
+    fuelType: "Hybrid",
+    mileage: 79500,
+    transmission: "Automatic",
+    details: "7 seater, spacious interior, hybrid technology, economical driving",
   },
 ];

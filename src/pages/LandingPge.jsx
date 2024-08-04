@@ -187,7 +187,7 @@ const LandingPge = () => {
             </div>
 
             <button className="bg-blue-600 text-white py-3 px-4 rounded-lg w-full font-medium mb-4">
-              MAKE AN OFFER
+              Apply Now
             </button>
 
             <div className="flex justify-between items-center">

@@ -12,7 +12,6 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { carData } from "../constants";
 
-
 const CarCard = ({ car }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const navigate = useNavigate();
@@ -49,7 +48,6 @@ const CarCard = ({ car }) => {
           </p>
         </div>
         <p className="text-sm text-gray-600 mb-4">{car.type}</p>
-
         <div className="grid grid-cols-2 gap-2 mb-4 text-sm">
           <Feature
             icon={<Fuel className="w-4 h-4 mr-2" />}
@@ -68,7 +66,6 @@ const CarCard = ({ car }) => {
             text={`${car.year}`}
           />
         </div>
-
         <div className="text-xs text-gray-600 mb-1 flex-grow">
           <div className="h-14 overflow-y-auto">
             {car.details.split(", ").map((detail, index) => (
@@ -81,7 +78,6 @@ const CarCard = ({ car }) => {
             ))}
           </div>
         </div>
-
         <div className="flex justify-between items-center mb-2">
           <button className="flex items-center text-green-600 text-sm font-semibold transition-all duration-300 hover:text-green-700"></button>
           <span className="text-2xl font-bold text-gray-800">
@@ -92,7 +88,14 @@ const CarCard = ({ car }) => {
           className="w-full bg-blue-600 text-white py-3 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md font-semibold"
           onClick={handleMakeOffer}
         >
-          Make an Offer
+          View Detail
+        </button>
+        <button
+        
+          className="w-full bg-blue-600 text-white py-3 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md font-semibold"
+          onClick={handleMakeOffer}
+        >
+          Apply Finance
         </button>
       </div>
     </div>
@@ -126,7 +129,10 @@ const Workflow = ({ id }) => {
               ))}
             </div>
             <div className="text-center">
-              <Link to="/all-cars" className="bg-gray-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-300 inline-flex items-center font-semibold shadow-md hover:shadow-lg">
+              <Link
+                to="/all-cars"
+                className="bg-gray-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-300 inline-flex items-center font-semibold shadow-md hover:shadow-lg"
+              >
                 View More Cars
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Link>

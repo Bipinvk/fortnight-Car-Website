@@ -7,6 +7,7 @@ import Testimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
+import CarFinanceApplication from "./Finance";
 const Home = () => {
   return (
     <>
@@ -16,7 +17,6 @@ const Home = () => {
         <FeatureSection id="features" />
         <Workflow id="cars" />
         <About id="about" />
-    
         <Footer />
       </div>
     </>
