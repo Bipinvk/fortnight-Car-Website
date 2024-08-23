@@ -1,14 +1,12 @@
 import React from "react";
-import key from "../assets/contact/Replacement-Car-Key.jpg"
-const About = ({ id }) => {
+import key from "../assets/contact/Replacement-Car-Key.jpg";
+const About = () => {
   return (
-    <div className="bg-white py-16" id={id}>
+    <div className="bg-white py-16" >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="lg:w-1/2 mb-8 lg:mb-0">
-            <h3 className="text-blue-500 font-semibold mb-2">
-              How It Started
-            </h3>
+            <h3 className="text-blue-500 font-semibold mb-2">How It Started</h3>
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-800">
               Our Dream is Quality Vehicle Trading
             </h2>

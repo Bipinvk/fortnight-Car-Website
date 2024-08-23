@@ -11,7 +11,6 @@ import CarFinanceApplication from "./Finance";
 const Home = () => {
   return (
     <>
-      <Navbar />
       <div>
         <HeroSection id="home" />
         <FeatureSection id="features" />

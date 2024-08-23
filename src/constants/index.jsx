@@ -91,11 +91,11 @@ import prius6 from "../assets/cars/2013Toyotaprius/prius6.jpeg";
 
 export const navItems = [
   { label: "Home", href: "/" },
-  { label: "Features", href: "/" },
-  { label: "Cars", href: "/" },
+  { label: "Cars ", href: "/all-cars" },
+  // { label: "Cars", href: "/" },
   // { label: "Customers", href: "#customers" },
-  { label: "About", href: "/" },
-  {label: "Finance", href: "/finance"}
+  { label: "Finance", href: "/finance/:id" },
+  { label: "About", href: "/about" },
 ];
 
 export const carData = [
@@ -311,19 +311,13 @@ export const carData = [
     id: 11,
     name: "Toyota Prius Alpha",
     type: "Hybrid 7-Seater",
-    images: [
-      prius1,
-      prius2,
-      prius3,
-      prius4,
-      prius5,
-      prius6,
-    ],
-    price: 17999, 
+    images: [prius1, prius2, prius3, prius4, prius5, prius6],
+    price: 17999,
     year: 2013,
     fuelType: "Hybrid",
     mileage: 79500,
     transmission: "Automatic",
-    details: "7 seater, spacious interior, hybrid technology, economical driving",
+    details:
+      "7 seater, spacious interior, hybrid technology, economical driving",
   },
 ];

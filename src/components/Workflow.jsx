@@ -24,8 +24,12 @@ const CarCard = ({ car }) => {
     return () => clearInterval(interval);
   }, [car.images]);
 
-  const handleMakeOffer = () => {
+  const handleViewDetails = () => {
     navigate(`/car/${car.id}`, { state: { car } });
+  };
+
+  const handleApplyFinance = () => {
+    navigate(`/finance/${car.id}`, { state: { car } });
   };
 
   return (
@@ -78,25 +82,26 @@ const CarCard = ({ car }) => {
             ))}
           </div>
         </div>
-        <div className="flex justify-between items-center mb-2">
+        {/* <div className="flex justify-between items-center mb-2">
           <button className="flex items-center text-green-600 text-sm font-semibold transition-all duration-300 hover:text-green-700"></button>
           <span className="text-2xl font-bold text-gray-800">
             ${car.price.toLocaleString()}
           </span>
+        </div> */}
+        <div className="flex space-x-4">
+          <button
+            className="flex-1 bg-blue-600 text-white py-3 px-4 rounded-lg transition-all duration-300 hover:bg-blue-700 font-semibold text-sm"
+            onClick={handleViewDetails}
+          >
+            View Details
+          </button>
+          <button
+            className="flex-1 bg-green-600 text-white py-3 px-4 rounded-lg transition-all duration-300 hover:bg-green-700 font-semibold text-sm"
+            onClick={handleApplyFinance}
+          >
+            Apply Finance
+          </button>
         </div>
-        <button
-          className="w-full bg-blue-600 text-white py-3 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md font-semibold"
-          onClick={handleMakeOffer}
-        >
-          View Detail
-        </button>
-        <button
-        
-          className="w-full bg-blue-600 text-white py-3 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-md font-semibold"
-          onClick={handleMakeOffer}
-        >
-          Apply Finance
-        </button>
       </div>
     </div>
   );
@@ -127,15 +132,15 @@ const Workflow = ({ id }) => {
               {carData.map((car) => (
                 <CarCard key={car.id} car={car} />
               ))}
-            </div>
-            <div className="text-center">
-              <Link
-                to="/all-cars"
-                className="bg-gray-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-300 inline-flex items-center font-semibold shadow-md hover:shadow-lg"
-              >
-                View More Cars
-                <ChevronRight className="w-5 h-5 ml-2" />
-              </Link>
+              <div className="text-center flex items-center justify-center">
+                <Link
+                  to="/all-cars"
+                  className="bg-gray-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-300 inline-flex items-center font-semibold shadow-md hover:shadow-lg"
+                >
+                  View More Cars
+                  <ChevronRight className="w-5 h-5 ml-2" />
+                </Link>
+              </div>
             </div>
           </Tabs.Content>
         </Tabs.Root>
