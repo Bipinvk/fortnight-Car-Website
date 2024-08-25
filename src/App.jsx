@@ -8,6 +8,9 @@ import Allcars from "./pages/AllCars";
 import Navbar from "./components/Navbar";
 import CarFinanceApplication from "./pages/Finance";
 import About from "./components/About";
+import FAQPage from "./components/faq";
+import TermsPage from "./components/terms";
+import PrivacyPage from "./components/policy";
 const App = () => {
   return (
     <Router>
@@ -20,6 +23,9 @@ const App = () => {
         <Route path="/all-cars" element={<Allcars />} />
         <Route path="/finance/:id" element={<CarFinanceApplication />} />
         <Route path="/about" element={<About />} />
+        <Route path="/faq" element={<FAQPage />} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
       </Routes>
     </Router>
   );

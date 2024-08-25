@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import * as Form from "@radix-ui/react-form";
 import * as Select from "@radix-ui/react-select";
-import { ChevronDownIcon, CheckIcon } from "lucide-react";
+import { ChevronDownIcon, CheckIcon, CalendarIcon } from "lucide-react";
+import emailjs from "emailjs-com";
 
 const CarFinanceApplication = () => {
   const location = useLocation();
@@ -49,33 +50,60 @@ const CarFinanceApplication = () => {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
+  useEffect(() => {
+    emailjs.init("bdNTHW-2fQM1jdA9u");
+  }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // Prepare data for WhatsApp message
-      const messageData = Object.entries(formData)
-        .map(([key, value]) => `${key}: ${value}`)
-        .join("\n");
+      try {
+        // Send email
+        await sendEmail(formData);
 
-      // Encode the message for URL
-      const encodedMessage = encodeURIComponent(messageData);
+        // Send WhatsApp message
+        // await sendWhatsApp(formData);
 
-      // WhatsApp API URL
-      const whatsappNumber = "1234567890"; // Replace with the actual WhatsApp number
-      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
-      // Open WhatsApp in a new window
-      window.open(whatsappUrl, "_blank");
-
-      // Show success message to user
-      alert(
-        "Application submitted successfully! WhatsApp will open with your application details. Please send the message."
-      );
+        // Show success message to user
+        alert(
+          "Application submitted successfully! An insurance application is being processed."
+        );
+        setFormData({});
+      } catch (error) {
+        console.error("Error submitting form:", error);
+        alert("An error occurred while submitting the form. Please try again.");
+      }
     } else {
       alert("Please fill in all required fields.");
     }
   };
+
+  const sendEmail = async (data) => {
+    try {
+      const result = await emailjs.send("service_2fxwpij", "template_vwrddm6", {
+        to_email: "fortunecars100@gmail.com",
+        from_name: `${data.firstName} ${data.lastName}`,
+        message: JSON.stringify(data, null, 2),
+      });
+      console.log("Email sent successfully:", result.text);
+    } catch (error) {
+      console.error("Error sending email:", error);
+      throw error;
+    }
+  };
+
+  const sendWhatsApp = async (data) => {
+    const messageData = Object.entries(data)
+      .map(([key, value]) => `${key}: ${value}`)
+      .join("\n");
+
+    const encodedMessage = encodeURIComponent(messageData);
+    const whatsappNumber = "9048491610"; // Replace with the actual WhatsApp number
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
       <main className="flex-grow container mx-auto py-8 px-4 sm:px-6 lg:px-8">
@@ -180,45 +208,90 @@ const FormSection = ({ title, children }) => (
   </section>
 );
 
+const FormField = ({
+  label,
+  name,
+  type = "text",
+  onChange,
+  options,
+  error,
+  required = false,
+  value,
+}) => {
+  const handleChange = (newValue) => {
+    onChange({ target: { name, value: newValue } });
+  };
 
-const FormField = ({ label, name, type = "text", onChange, options, error, required = false }) => (
-  <div className="mb-4">
-    <label htmlFor={name} className="block mb-2 text-sm font-medium text-gray-700">
-      {label} {required && <span className="text-red-500">*</span>}
-    </label>
-    {type === "select" ? (
-      <select
-        id={name}
-        name={name}
-        onChange={onChange}
-        className={`w-full px-4 py-3 text-sm text-gray-700 bg-white border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
-          error ? "border-red-500" : "border-gray-300"
-        }`}
-        required={required}
+  return (
+    <div className="mb-4">
+      <label
+        htmlFor={name}
+        className="block mb-2 text-sm font-medium text-gray-700"
       >
-        <option value="">Select an option</option>
-        {options.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </select>
-    ) : (
-      <input
-        type={type}
-        id={name}
-        name={name}
-        onChange={onChange}
-        className={`w-full px-4 py-3 text-sm text-gray-700 bg-white border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
-          error ? "border-red-500" : "border-gray-300"
-        }`}
-        required={required}
-      />
-    )}
-    {error && <p className="mt-1 text-sm text-red-600">{error}</p>}
-  </div>
-);
-
+        {label} {required && <span className="text-red-500">*</span>}
+      </label>
+      {type === "select" ? (
+        <Select.Root onValueChange={(value) => handleChange(value)}>
+          <Select.Trigger
+            className="flex items-center justify-between w-full px-4 py-3 text-sm text-gray-700 bg-white border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            aria-label={label}
+          >
+            <Select.Value placeholder="Select an option" />
+            <Select.Icon>
+              <ChevronDownIcon className="w-4 h-4 text-gray-400" />
+            </Select.Icon>
+          </Select.Trigger>
+          <Select.Portal>
+            <Select.Content className="overflow-hidden bg-white rounded-md shadow-lg">
+              <Select.Viewport className="p-1">
+                {options.map((option) => (
+                  <Select.Item
+                    key={option.value}
+                    value={option.value}
+                    className="relative flex items-center px-8 py-2 text-sm text-gray-700 rounded-md cursor-default select-none hover:bg-blue-50 focus:bg-blue-100"
+                  >
+                    <Select.ItemText>{option.label}</Select.ItemText>
+                    <Select.ItemIndicator className="absolute left-2 inline-flex items-center">
+                      <CheckIcon className="w-4 h-4" />
+                    </Select.ItemIndicator>
+                  </Select.Item>
+                ))}
+              </Select.Viewport>
+            </Select.Content>
+          </Select.Portal>
+        </Select.Root>
+      ) : type === "date" ? (
+        <div className="relative">
+          <input
+            type="date"
+            id={name}
+            name={name}
+            value={value}
+            onChange={(e) => handleChange(e.target.value)}
+            className="w-full px-4 py-3 text-sm text-gray-700 bg-white border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none"
+            required={required}
+          />
+          <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+            <CalendarIcon className="w-5 h-5 text-gray-400" />
+          </div>
+        </div>
+      ) : (
+        <input
+          type={type}
+          id={name}
+          name={name}
+          value={value}
+          onChange={(e) => handleChange(e.target.value)}
+          className={`w-full px-4 py-3 text-sm text-gray-700 bg-white border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
+            error ? "border-red-500" : "border-gray-300"
+          }`}
+          required={required}
+        />
+      )}
+      {error && <p className="mt-1 text-sm text-red-600">{error}</p>}
+    </div>
+  );
+};
 
 const PersonalDetails = ({ onChange, errors }) => (
   <FormSection title="Personal Details">

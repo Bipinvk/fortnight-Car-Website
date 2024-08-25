@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { ChevronUp } from "lucide-react";
+import { useLocation } from "react-router-dom";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -17,6 +19,10 @@ const ScrollToTop = () => {
 
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const scrollToTop = () => {
     window.scrollTo({

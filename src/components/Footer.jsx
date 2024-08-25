@@ -1,25 +1,19 @@
 import React from "react";
 
 const resourcesLinks = [
-  { href: "/inventory", text: "Car Inventory" },
-  { href: "/sell-your-car", text: "Sell Your Car" },
-  { href: "/financing", text: "Financing Options" },
-  { href: "/vehicle-history", text: "Vehicle History Reports" },
+  { href: "/all-cars", text: "Car Inventory" },
+  { href: "/finance/:id", text: "Financing Options" },
 ];
 
 const platformLinks = [
-  { href: "/how-it-works", text: "How It Works" },
-  { href: "/pricing", text: "Pricing" },
   { href: "/faq", text: "FAQ" },
   { href: "/terms", text: "Terms of Service" },
   { href: "/privacy", text: "Privacy Policy" },
 ];
 
 const communityLinks = [
-  { href: "/about-us", text: "About Fortune Cars" },
+  { href: "/about", text: "About Fortune Cars" },
   { href: "/testimonials", text: "Customer Testimonials" },
-  { href: "/blog", text: "Car Buying Tips" },
-  { href: "/events", text: "Local Car Events" },
   { href: "/contact", text: "Contact Us" },
 ];
 
