@@ -89,6 +89,36 @@ import prius4 from "../assets/cars/2013Toyotaprius/prius4.jpeg";
 import prius5 from "../assets/cars/2013Toyotaprius/prius5.jpeg";
 import prius6 from "../assets/cars/2013Toyotaprius/prius6.jpeg";
 
+import vezel1 from "../assets/cars/2014Hondavezelhybrid/2014vezel1.jpeg";
+import vezel2 from "../assets/cars/2014Hondavezelhybrid/2014vezel2.jpeg";
+import vezel3 from "../assets/cars/2014Hondavezelhybrid/2014vezel3.jpeg";
+import vezel4 from "../assets/cars/2014Hondavezelhybrid/2014vezel4.jpeg";
+
+import chr1 from "../assets/cars/2020ToyotaChrhybridG/2020toyotachg.jpeg";
+import chr2 from "../assets/cars/2020ToyotaChrhybridG/2020toyotachg1.jpeg";
+import chr3 from "../assets/cars/2020ToyotaChrhybridG/2020toyotachg2.jpeg";
+
+import priusalpha20131 from "../assets/cars/2013priusalpha/priusalpha1.jpeg";
+import priusalpha20132 from "../assets/cars/2013priusalpha/priusalpha2.jpeg";
+import priusalpha20133 from "../assets/cars/2013priusalpha/priusalpha3.jpeg";
+import priusalpha20134 from "../assets/cars/2013priusalpha/priusalpha4.jpeg";
+import priusalpha20135 from "../assets/cars/2013priusalpha/priusalpha5.jpeg";
+import priusalpha20136 from "../assets/cars/2013priusalpha/priusalpha6.jpeg";
+import priusalpha20137 from "../assets/cars/2013priusalpha/priusalpha7.jpeg";
+
+import toyotacamry1 from "../assets/cars/2013ToyotaCamry/ToyotaCamry1.jpeg";
+import toyotacamry2 from "../assets/cars/2013ToyotaCamry/ToyotaCamry2.jpeg";
+import toyotacamry3 from "../assets/cars/2013ToyotaCamry/ToyotaCamry3.jpeg";
+import toyotacamry4 from "../assets/cars/2013ToyotaCamry/ToyotaCamry4.jpeg";
+import toyotacamry5 from "../assets/cars/2013ToyotaCamry/ToyotaCamry5.jpeg";
+import toyotacamry6 from "../assets/cars/2013ToyotaCamry/ToyotaCamry6.jpeg";
+
+import fithybrid1 from "../assets/cars/2016Hondafit/fithybrid1.jpeg";
+import fithybrid2 from "../assets/cars/2016Hondafit/fithybrid2.jpeg";
+import fithybrid3 from "../assets/cars/2016Hondafit/fithybrid3.jpeg";
+import fithybrid4 from "../assets/cars/2016Hondafit/fithybrid4.jpeg";
+import fithybrid5 from "../assets/cars/2016Hondafit/fithybrid5.jpeg";
+
 export const navItems = [
   { label: "Home", href: "/" },
   { label: "Cars ", href: "/all-cars" },
@@ -319,5 +349,92 @@ export const carData = [
     transmission: "Automatic",
     details:
       "7 seater, spacious interior, hybrid technology, economical driving",
+  },
+  {
+    id: 12,
+    name: "Honda Vezel Hybrid",
+    type: "Hybrid SUV",
+    images: [vezel1, vezel2, vezel3, vezel4],
+    price: 16500,
+    year: 2014,
+    fuelType: "Hybrid",
+    mileage: 83000,
+    transmission: "Automatic",
+    details:
+      "Spacious interior, hybrid technology, fuel-efficient, modern features",
+  },
+  {
+    id: 13,
+    name: "Toyota C-HR Hybrid G",
+    type: "Hybrid SUV",
+    images: [chr1, chr2, chr3],
+    price: 28500,
+    year: 2020,
+    fuelType: "Hybrid",
+    mileage: 71000,
+    transmission: "Automatic",
+    details:
+      "Hybrid technology, fuel-efficient, cruise control, alloy wheels, push start keyless entry, semi-leather seats",
+  },
+  {
+    id: 14,
+    name: "Toyota Prius Alpha S Touring",
+    type: "Hybrid 7-Seater",
+    images: [
+      priusalpha20131,
+      priusalpha20132,
+      priusalpha20133,
+      priusalpha20134,
+      priusalpha20135,
+      priusalpha20136,
+      priusalpha20137,
+    ],
+    price: 16800,
+    year: 2013,
+    fuelType: "Hybrid",
+    mileage: 78000,
+    transmission: "Automatic",
+    details:
+      "7-seater, S Touring edition, excellent condition, hybrid technology, fuel-efficient, spacious interior",
+  },
+  {
+    id: 15,
+    name: "Toyota Camry Hybrid G",
+    type: "Hybrid Sedan",
+    images: [
+      toyotacamry1,
+      toyotacamry2,
+      toyotacamry3,
+      toyotacamry4,
+      toyotacamry5,
+      toyotacamry6,
+    ],
+    price: 17800,
+    year: 2013,
+    fuelType: "Hybrid",
+    mileage: 56000,
+    transmission: "Automatic",
+    details:
+      "G model, push start, keyless entry, alloy wheels, cruise control, fuel-efficient, smooth driving experience",
+  },
+  {
+    id: 16,
+    name: "Honda Fit Hybrid",
+    type: "Hybrid Hatchback",
+    images: [
+      fithybrid1,
+      fithybrid2,
+      fithybrid3,
+      fithybrid4,
+      fithybrid5,
+      fithybrid6,
+    ],
+    price: 15400,
+    year: 2016,
+    fuelType: "Hybrid",
+    mileage: 67000,
+    transmission: "Automatic",
+    details:
+      "Push start, keyless entry, cruise control, fuel-efficient, compact yet spacious",
   },
 ];
