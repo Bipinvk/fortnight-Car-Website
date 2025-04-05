@@ -427,7 +427,6 @@ export const carData = [
       fithybrid3,
       fithybrid4,
       fithybrid5,
-      fithybrid6,
     ],
     price: 15400,
     year: 2016,
