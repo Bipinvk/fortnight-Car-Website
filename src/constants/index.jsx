@@ -15,18 +15,7 @@ import NissanNote6 from "../assets/cars/2019NissanNote/2019NissanNote6.jpeg";
 import NissanNote7 from "../assets/cars/2019NissanNote/2019NissanNote7.jpeg";
 import NissanNote8 from "../assets/cars/2019NissanNote/2019NissanNote8.jpeg";
 import NissanNote9 from "../assets/cars/2019NissanNote/2019NissanNote9.jpeg";
-import Toyotaaquapink1 from "../assets/cars/2017Toyotaaqua/2017Toyotaaqua1.jpeg";
-import Toyotaaquapink2 from "../assets/cars/2017Toyotaaqua/2017Toyotaaqua2.jpeg";
-import Toyotaaquapink3 from "../assets/cars/2017Toyotaaqua/2017Toyotaaqua3.jpeg";
-import Toyotaaquapink4 from "../assets/cars/2017Toyotaaqua/2017Toyotaaqua4.jpeg";
-import Toyotaaquapink5 from "../assets/cars/2017Toyotaaqua/2017Toyotaaqua5.jpeg";
-import Toyotaaquapink6 from "../assets/cars/2017Toyotaaqua/2017Toyotaaqua6.jpeg";
-import Toyotaaquapink7 from "../assets/cars/2017Toyotaaqua/2017Toyotaaqua7.jpeg";
-import Toyotaaquapink8 from "../assets/cars/2017Toyotaaqua/2017Toyotaaqua8.jpeg";
-import Toyotaaquapink9 from "../assets/cars/2017Toyotaaqua/2017Toyotaaqua9.jpeg";
-import Toyotaaquapink10 from "../assets/cars/2017Toyotaaqua/2017Toyotaaqua10.jpeg";
-import Toyotaaquapink11 from "../assets/cars/2017Toyotaaqua/2017Toyotaaqua11.jpeg";
-import Toyotaaquapink12 from "../assets/cars/2017Toyotaaqua/2017Toyotaaqua12.jpeg";
+
 import totyotomain from "../assets/cars/Toyotaprius2015/Toyotoprius1.jpeg";
 import Toyotaprius1 from "../assets/cars/Toyotaprius2015/Toyotoprius1.jpeg";
 import Toyotaprius2 from "../assets/cars/Toyotaprius2015/Toyotoprius2.jpeg";
@@ -133,31 +122,6 @@ export const carData = [
   },
   {
     id: 3,
-    name: "Toyota Aqua",
-    type: "Hybrid g model",
-    images: [
-      Toyotaaquapink10,
-      Toyotaaquapink11,
-      Toyotaaquapink12,
-      Toyotaaquapink4,
-      Toyotaaquapink1,
-      Toyotaaquapink2,
-      Toyotaaquapink3,
-      Toyotaaquapink4,
-      Toyotaaquapink5,
-      Toyotaaquapink7,
-      Toyotaaquapink8,
-      Toyotaaquapink9,
-    ],
-    price: 16800,
-    year: 2017,
-    fuelType: "Hybrid",
-    mileage: 26500,
-    transmission: "Automatic",
-    details: "Push start, keyless entry, excellent condition",
-  },
-  {
-    id: 4,
     name: "Toyota Prius",
     type: "Hybrid",
     images: [
@@ -178,7 +142,7 @@ export const carData = [
     details: "S model, push start, keyless entry, alloy wheels",
   },
   {
-    id: 5,
+    id: 4,
     name: "Prius Alpha",
     type: "Hybrid",
     images: [
@@ -197,7 +161,7 @@ export const carData = [
     details: "5 seats",
   },
   {
-    id: 6,
+    id: 5,
     name: "Toyota Prius Alpha",
     type: "Hybrid 7-Seater",
     images: [prius1, prius2, prius3, prius4, prius5, prius6],
@@ -210,7 +174,7 @@ export const carData = [
       "7 seater, spacious interior, hybrid technology, economical driving",
   },
   {
-    id: 7,
+    id: 6,
     name: "Honda Vezel Hybrid",
     type: "Hybrid SUV",
     images: [vezel1, vezel2, vezel3, vezel4],
@@ -223,7 +187,7 @@ export const carData = [
       "Spacious interior, hybrid technology, fuel-efficient, modern features",
   },
   {
-    id: 8,
+    id: 7,
     name: "Toyota C-HR Hybrid G",
     type: "Hybrid SUV",
     images: [chr1, chr2, chr3],
@@ -236,7 +200,7 @@ export const carData = [
       "Hybrid technology, fuel-efficient, cruise control, alloy wheels, push start keyless entry, semi-leather seats",
   },
   {
-    id: 9,
+    id: 8,
     name: "Toyota Prius Alpha S Touring",
     type: "Hybrid 7-Seater",
     images: [
@@ -257,7 +221,7 @@ export const carData = [
       "7-seater, S Touring edition, excellent condition, hybrid technology, fuel-efficient, spacious interior",
   },
   {
-    id: 10,
+    id: 9,
     name: "Toyota Camry Hybrid G",
     type: "Hybrid Sedan",
     images: [
@@ -277,7 +241,7 @@ export const carData = [
       "G model, push start, keyless entry, alloy wheels, cruise control, fuel-efficient, smooth driving experience",
   },
   {
-    id: 11,
+    id: 10,
     name: "Honda Fit Hybrid",
     type: "Hybrid Hatchback",
     images: [fithybrid1, fithybrid2, fithybrid3, fithybrid4, fithybrid5],
