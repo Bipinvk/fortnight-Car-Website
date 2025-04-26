@@ -1,11 +1,3 @@
-// Import car images
-import toyota_aqua_2017_1 from "../assets/cars/2017 Toyota aqua hybrid 2017 Toyota aqua hybrid/2017.jpeg";
-import toyota_aqua_2017_2 from "../assets/cars/2017 Toyota aqua hybrid 2017 Toyota aqua hybrid/20172.jpeg";
-import toyota_aqua_2017_3 from "../assets/cars/2017 Toyota aqua hybrid 2017 Toyota aqua hybrid/20173.jpeg";
-import toyota_aqua_2017_4 from "../assets/cars/2017 Toyota aqua hybrid 2017 Toyota aqua hybrid/20174.jpeg";
-import toyota_aqua_2017_5 from "../assets/cars/2017 Toyota aqua hybrid 2017 Toyota aqua hybrid/20175.jpeg";
-import toyota_aqua_2017_6 from "../assets/cars/2017 Toyota aqua hybrid 2017 Toyota aqua hybrid/20176.jpeg";
-import toyota_aqua_2017_7 from "../assets/cars/2017 Toyota aqua hybrid 2017 Toyota aqua hybrid/20177.jpeg";
 import NissanNote1 from "../assets/cars/2019NissanNote/2019NissanNote1.jpeg";
 import NissanNote2 from "../assets/cars/2019NissanNote/2019NissanNote2.jpeg";
 import NissanNote3 from "../assets/cars/2019NissanNote/2019NissanNote3.jpeg";
@@ -68,6 +60,23 @@ import fithybrid3 from "../assets/cars/2016Hondafit/fithybrid3.jpeg";
 import fithybrid4 from "../assets/cars/2016Hondafit/fithybrid4.jpeg";
 import fithybrid5 from "../assets/cars/2016Hondafit/fithybrid5.jpeg";
 
+import GToyota1 from "../assets/cars/GToyotaAqua1/GToyota1.jpeg";
+import GToyota2 from "../assets/cars/GToyotaAqua1/GToyota2.jpeg";
+import GToyota3 from "../assets/cars/GToyotaAqua1/GToyota3.jpeg";
+import GToyota4 from "../assets/cars/GToyotaAqua1/GToyota4.jpeg";
+import GToyota5 from "../assets/cars/GToyotaAqua1/GToyota5.jpeg";
+import GToyota6 from "../assets/cars/GToyotaAqua1/GToyota6.jpeg";
+import GToyota7 from "../assets/cars/GToyotaAqua1/GToyota7.jpeg";
+
+import HondaFit1 from "../assets/cars/HondaFitHybrid1/HondaFit1.jpeg";
+import HondaFit2 from "../assets/cars/HondaFitHybrid1/HondaFit2.jpeg";
+import HondaFit3 from "../assets/cars/HondaFitHybrid1/HondaFit3.jpeg";
+import HondaFit4 from "../assets/cars/HondaFitHybrid1/HondaFit4.jpeg";
+import HondaFit5 from "../assets/cars/HondaFitHybrid1/HondaFit5.jpeg";
+import HondaFit6 from "../assets/cars/HondaFitHybrid1/HondaFit6.jpeg";
+
+
+
 export const navItems = [
   { label: "Home", href: "/" },
   { label: "Cars ", href: "/all-cars" },
@@ -80,24 +89,26 @@ export const navItems = [
 export const carData = [
   {
     id: 1,
-    name: "Toyota Aqua",
-    type: "Hybrid S model",
+    name: "Toyota Aqua G",
+    type: "Hybrid",
     images: [
-      toyota_aqua_2017_1,
-      toyota_aqua_2017_2,
-      toyota_aqua_2017_3,
-      toyota_aqua_2017_4,
-      toyota_aqua_2017_5,
-      toyota_aqua_2017_6,
-      toyota_aqua_2017_7,
+      GToyota1,
+      GToyota2,
+      GToyota3,
+      GToyota4,
+      GToyota5,
+      GToyota6,
+      GToyota7,
     ],
-    price: 15800,
-    year: 2017,
+    price: 13800,
+    year: 2015,
     fuelType: "Hybrid",
-    mileage: 71000,
+    mileage: 51000,
     transmission: "Automatic",
-    details: "Push start, keyless entry",
+    details:
+      "Push start, keyless entry, alloy wheels, cruise control. Plus ORC.",
   },
+  ,
   {
     id: 2,
     name: "Nissan Note",
@@ -253,4 +264,25 @@ export const carData = [
     details:
       "Push start, keyless entry, cruise control, fuel-efficient, compact yet spacious",
   },
+  {
+    id: 11, 
+    name: "Honda Fit Hybrid",
+    type: "Hybrid",
+    images: [
+      HondaFit1,
+      HondaFit2,
+      HondaFit3,
+      HondaFit4,
+      HondaFit5,
+      HondaFit6,
+   
+    ],
+    price: 15700,
+    year: 2016,
+    fuelType: "Hybrid",
+    mileage: 45000, 
+    transmission: "Automatic",
+    details: "",
+  }
+  
 ];
