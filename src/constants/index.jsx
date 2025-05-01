@@ -75,7 +75,12 @@ import HondaFit4 from "../assets/cars/HondaFitHybrid1/HondaFit4.jpeg";
 import HondaFit5 from "../assets/cars/HondaFitHybrid1/HondaFit5.jpeg";
 import HondaFit6 from "../assets/cars/HondaFitHybrid1/HondaFit6.jpeg";
 
-
+import ToyotaPrius1 from "../assets/cars/Toyotaprius2015/Toyotoprius1.jpeg";
+import ToyotaPrius2 from "../assets/cars/Toyotaprius2015/Toyotoprius2.jpeg";
+import ToyotaPrius3 from "../assets/cars/Toyotaprius2015/Toyotoprius3.jpeg";
+import ToyotaPrius4 from "../assets/cars/Toyotaprius2015/Toyotoprius4.jpeg";
+import ToyotaPrius5 from "../assets/cars/Toyotaprius2015/Toyotoprius5.jpeg";
+import ToyotaPrius6 from "../assets/cars/Toyotaprius2015/Toyotoprius6.jpeg";
 
 export const navItems = [
   { label: "Home", href: "/" },
@@ -265,24 +270,37 @@ export const carData = [
       "Push start, keyless entry, cruise control, fuel-efficient, compact yet spacious",
   },
   {
-    id: 11, 
+    id: 11,
     name: "Honda Fit Hybrid",
     type: "Hybrid",
-    images: [
-      HondaFit1,
-      HondaFit2,
-      HondaFit3,
-      HondaFit4,
-      HondaFit5,
-      HondaFit6,
-   
-    ],
+    images: [HondaFit1, HondaFit2, HondaFit3, HondaFit4, HondaFit5, HondaFit6],
     price: 15700,
     year: 2016,
     fuelType: "Hybrid",
-    mileage: 45000, 
+    mileage: 45000,
     transmission: "Automatic",
-    details: "",
-  }
-  
+    details:
+      "2016 Honda Fit Hybrid with 45,000 km. Excellent fuel economy, automatic transmission.",
+  },
+
+  {
+    id: 12,
+    name: "Toyota Prius S",
+    type: "Hybrid",
+    images: [
+      ToyotaPrius1,
+      ToyotaPrius2,
+      ToyotaPrius3,
+      ToyotaPrius4,
+      ToyotaPrius5,
+      ToyotaPrius6,
+    ],
+    price: 21500,
+    year: 2019,
+    fuelType: "Hybrid",
+    mileage: 21500,
+    transmission: "Automatic",
+    details:
+      "Push start, keyless entry, alloy wheels, cruise control, Android player with Apple CarPlay installed.",
+  },
 ];
