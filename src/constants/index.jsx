@@ -82,6 +82,23 @@ import ToyotaPrius4 from "../assets/cars/Toyotaprius2015/Toyotoprius4.jpeg";
 import ToyotaPrius5 from "../assets/cars/Toyotaprius2015/Toyotoprius5.jpeg";
 import ToyotaPrius6 from "../assets/cars/Toyotaprius2015/Toyotoprius6.jpeg";
 
+import Toyota2019Prius1 from "../assets/cars/2019ToyotaPrius/tp20151.jpeg";
+import Toyota2019Prius2 from "../assets/cars/2019ToyotaPrius/tp20152.jpeg";
+import Toyota2019Prius3 from "../assets/cars/2019ToyotaPrius/tp20153.jpeg";
+import Toyota2019Prius4 from "../assets/cars/2019ToyotaPrius/tp20154.jpeg";
+import Toyota2019Prius5 from "../assets/cars/2019ToyotaPrius/tp20155.jpeg";
+import Toyota2019Prius6 from "../assets/cars/2019ToyotaPrius/tp20156.jpeg";
+import Toyota2019Prius7 from "../assets/cars/2019ToyotaPrius/tp20157.jpeg";
+import Toyota2019Prius8 from "../assets/cars/2019ToyotaPrius/tp20158.jpeg";
+
+import Honda2018Vezel1 from "../assets/cars/2018HondaVezel/2013vezel1.jpeg";
+import Honda2018Vezel2 from "../assets/cars/2018HondaVezel/2013vezel2.jpeg";
+import Honda2018Vezel3 from "../assets/cars/2018HondaVezel/2013vezel3.jpeg";
+import Honda2018Vezel4 from "../assets/cars/2018HondaVezel/2013vezel4.jpeg";
+import Honda2018Vezel5 from "../assets/cars/2018HondaVezel/2013vezel5.jpeg";
+import Honda2018Vezel6 from "../assets/cars/2018HondaVezel/2013vezel6.jpeg";
+import Honda2018Vezel7 from "../assets/cars/2018HondaVezel/2013vezel7.jpeg";
+
 export const navItems = [
   { label: "Home", href: "/" },
   { label: "Cars ", href: "/all-cars" },
@@ -282,18 +299,19 @@ export const carData = [
     details:
       "2016 Honda Fit Hybrid with 45,000 km. Excellent fuel economy, automatic transmission.",
   },
-
   {
     id: 12,
     name: "Toyota Prius S",
     type: "Hybrid",
     images: [
-      ToyotaPrius1,
-      ToyotaPrius2,
-      ToyotaPrius3,
-      ToyotaPrius4,
-      ToyotaPrius5,
-      ToyotaPrius6,
+      Toyota2019Prius1,
+      Toyota2019Prius2,
+      Toyota2019Prius3,
+      Toyota2019Prius4,
+      Toyota2019Prius5,
+      Toyota2019Prius6,
+      Toyota2019Prius7,
+      Toyota2019Prius8,
     ],
     price: 21500,
     year: 2019,
@@ -302,5 +320,26 @@ export const carData = [
     transmission: "Automatic",
     details:
       "Push start, keyless entry, alloy wheels, cruise control, Android player with Apple CarPlay installed.",
+  },
+  {
+    id: 13,
+    name: "Honda Vezel Hybrid Z",
+    type: "Hybrid",
+    images: [
+      Honda2018Vezel1,
+      Honda2018Vezel2,
+      Honda2018Vezel3,
+      Honda2018Vezel4,
+      Honda2018Vezel5,
+      Honda2018Vezel6,
+      Honda2018Vezel7,
+    ],
+    price: 25800,
+    year: 2018,
+    fuelType: "Hybrid",
+    mileage: 31000,
+    transmission: "Automatic",
+    details:
+      "Z variant with cruise control, push start, LED lights, paddle shifters, Android infotainment, premium interior, and alloy wheels.",
   },
 ];
