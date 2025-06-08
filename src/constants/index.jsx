@@ -99,6 +99,13 @@ import Honda2018Vezel5 from "../assets/cars/2018HondaVezel/2013vezel5.jpeg";
 import Honda2018Vezel6 from "../assets/cars/2018HondaVezel/2013vezel6.jpeg";
 import Honda2018Vezel7 from "../assets/cars/2018HondaVezel/2013vezel7.jpeg";
 
+import ToyotaCamryHybrid1 from "../assets/cars/2018ToyotaCamryHybrid/2018ToyatoCamry1.jpeg";
+import ToyotaCamryHybrid2 from "../assets/cars/2018ToyotaCamryHybrid/2018ToyatoCamry2.jpeg";
+import ToyotaCamryHybrid3 from "../assets/cars/2018ToyotaCamryHybrid/2018ToyatoCamry3.jpeg";
+import ToyotaCamryHybrid4 from "../assets/cars/2018ToyotaCamryHybrid/2018ToyatoCamry4.jpeg";
+import ToyotaCamryHybrid5 from "../assets/cars/2018ToyotaCamryHybrid/2018ToyatoCamry5.jpeg";
+import ToyotaCamryHybrid6 from "../assets/cars/2018ToyotaCamryHybrid/2018ToyatoCamry6.jpeg";
+
 export const navItems = [
   { label: "Home", href: "/" },
   { label: "Cars ", href: "/all-cars" },
@@ -341,5 +348,25 @@ export const carData = [
     transmission: "Automatic",
     details:
       "Z variant with cruise control, push start, LED lights, paddle shifters, Android infotainment, premium interior, and alloy wheels.",
+  },
+  {
+    id: 14,
+    name: "Toyota Camry Hybrid G",
+    type: "Hybrid",
+    images: [
+      ToyotaCamryHybrid1,
+      ToyotaCamryHybrid2,
+      ToyotaCamryHybrid3,
+      ToyotaCamryHybrid4,
+      ToyotaCamryHybrid5,
+      ToyotaCamryHybrid6,
+    ],
+    price: 28900,
+    year: 2018,
+    fuelType: "Hybrid",
+    mileage: 57500,
+    transmission: "Automatic",
+    details:
+      "G variant with push start, keyless entry, alloy wheels, cruise control, and excellent fuel efficiency.",
   },
 ];
