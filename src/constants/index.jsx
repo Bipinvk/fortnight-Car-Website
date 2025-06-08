@@ -106,6 +106,32 @@ import ToyotaCamryHybrid4 from "../assets/cars/2018ToyotaCamryHybrid/2018ToyatoC
 import ToyotaCamryHybrid5 from "../assets/cars/2018ToyotaCamryHybrid/2018ToyatoCamry5.jpeg";
 import ToyotaCamryHybrid6 from "../assets/cars/2018ToyotaCamryHybrid/2018ToyatoCamry6.jpeg";
 
+import Toyota2016Prius1 from "../assets/cars/2016ToyotaPrius/2016ToyotaPrius1.jpeg";
+import Toyota2016Prius2 from "../assets/cars/2016ToyotaPrius/2016ToyotaPrius2.jpeg";
+import Toyota2016Prius3 from "../assets/cars/2016ToyotaPrius/2016ToyotaPrius3.jpeg";
+import Toyota2016Prius4 from "../assets/cars/2016ToyotaPrius/2016ToyotaPrius4.jpeg";
+import Toyota2016Prius5 from "../assets/cars/2016ToyotaPrius/2016ToyotaPrius5.jpeg";
+import Toyota2016Prius6 from "../assets/cars/2016ToyotaPrius/2016ToyotaPrius6.jpeg";
+import Toyota2016Prius7 from "../assets/cars/2016ToyotaPrius/2016ToyotaPrius7.jpeg";
+import Toyota2016Prius8 from "../assets/cars/2016ToyotaPrius/2016ToyotaPrius8.jpeg";
+import Toyota2016Prius9 from "../assets/cars/2016ToyotaPrius/2016ToyotaPrius9.jpeg";
+import Toyota2016Prius10 from "../assets/cars/2016ToyotaPrius/2016ToyotaPrius10.jpeg";
+import Toyota2016Prius11 from "../assets/cars/2016ToyotaPrius/2016ToyotaPrius11.jpeg";
+
+const Toyota2016PriusImages = [
+  Toyota2016Prius1,
+  Toyota2016Prius2,
+  Toyota2016Prius3,
+  Toyota2016Prius4,
+  Toyota2016Prius5,
+  Toyota2016Prius6,
+  Toyota2016Prius7,
+  Toyota2016Prius8,
+  Toyota2016Prius9,
+  Toyota2016Prius10,
+  Toyota2016Prius11,
+];
+
 export const navItems = [
   { label: "Home", href: "/" },
   { label: "Cars ", href: "/all-cars" },
@@ -368,5 +394,18 @@ export const carData = [
     transmission: "Automatic",
     details:
       "G variant with push start, keyless entry, alloy wheels, cruise control, and excellent fuel efficiency.",
+  },
+  {
+    id: 15,
+    name: "Toyota Prius S",
+    type: "Hybrid",
+    images: Toyota2016PriusImages,
+    price: 17500,
+    year: 2016,
+    fuelType: "Hybrid",
+    mileage: 69500,
+    transmission: "Automatic",
+    details:
+      "S model with push start, keyless entry, alloy wheels, cruise control, and excellent fuel efficiency.",
   },
 ];
