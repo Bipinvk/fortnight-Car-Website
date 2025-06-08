@@ -349,7 +349,7 @@ export const carData = [
     price: 21500,
     year: 2019,
     fuelType: "Hybrid",
-    mileage: 21500,
+    mileage: 83500,
     transmission: "Automatic",
     details:
       "Push start, keyless entry, alloy wheels, cruise control, Android player with Apple CarPlay installed.",
