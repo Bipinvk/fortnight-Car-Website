@@ -170,7 +170,6 @@ export const carData = [
     details:
       "Push start, keyless entry, alloy wheels, cruise control. Plus ORC.",
   },
-  ,
   {
     id: 2,
     name: "Nissan Note",
