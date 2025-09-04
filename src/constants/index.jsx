@@ -118,6 +118,13 @@ import Toyota2016Prius9 from "../assets/cars/2016ToyotaPrius/2016ToyotaPrius9.jp
 import Toyota2016Prius10 from "../assets/cars/2016ToyotaPrius/2016ToyotaPrius10.jpeg";
 import Toyota2016Prius11 from "../assets/cars/2016ToyotaPrius/2016ToyotaPrius11.jpeg";
 
+import ToyotaChrHybridB1 from "../assets/cars/2018ToyotaChrHybrid/toyatochrblack1.jpeg";
+import ToyotaChrHybridB2 from "../assets/cars/2018ToyotaChrHybrid/toyatochrblack2.jpeg";
+import ToyotaChrHybridB3 from "../assets/cars/2018ToyotaChrHybrid/toyatochrblack3.jpeg";
+import ToyotaChrHybridB4 from "../assets/cars/2018ToyotaChrHybrid/toyatochrblack4.jpeg";
+import ToyotaChrHybridB5 from "../assets/cars/2018ToyotaChrHybrid/toyatochrblack5.jpeg";
+import ToyotaChrHybridB6 from "../assets/cars/2018ToyotaChrHybrid/toyatochrblack6.jpeg";
+
 const Toyota2016PriusImages = [
   Toyota2016Prius1,
   Toyota2016Prius2,
@@ -407,5 +414,25 @@ export const carData = [
     transmission: "Automatic",
     details:
       "S model with push start, keyless entry, alloy wheels, cruise control, and excellent fuel efficiency.",
+  },
+  {
+    id: 16,
+    name: "Toyota C-HR Hybrid",
+    type: "Hybrid",
+    images: [
+      ToyotaChrHybridB1,
+      ToyotaChrHybridB2,
+      ToyotaChrHybridB3,
+      ToyotaChrHybridB4,
+      ToyotaChrHybridB5,
+      ToyotaChrHybridB6,
+    ],
+    price: 26800,
+    year: 2018,
+    fuelType: "Hybrid",
+    mileage: 35500,
+    transmission: "Automatic",
+    details:
+      "Super low km (35,500 km). Android player with CarPlay installed. Full body kit, professionally groomed, ceramic coated. 26800 Plus ORC.",
   },
 ];
